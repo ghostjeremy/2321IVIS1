@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhikun-IVIS24-D3</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+    .selector-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .selector {
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selector:last-child {
+        margin-right: 0;
+    }
+
+    .selector-label {
+        margin-bottom: 5px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    
+        .selector1{ color: red; }
+        .selector2 { color: blue; }
+        .selector3{ color: green; }
+        .selector4 { color: purple; }
+    
+        #radarChart {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        label {
+        margin-bottom: 10px; 
+
+    }
+    
+    .overview-container {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px; 
+}
+
+.separator-line {
+    width: 100%; 
+    border: 0; 
+    height: 1px; 
+    background-color: #ccc; 
+    margin-bottom: 20px; 
+}
+.centered-title {
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    color: rgba(0, 0, 0, 0.8); 
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.8); 
+}
+    </style>
+    
+</head>
+<body>
+
+    <h1 class="centered-title">IVIS24: Visualize Student Group Formation based on Individual Skills</h1>
+    <p class="centered-text">Zhikun WU</p>
+    <hr class="separator-line"> 
+    <div id="barChart"></div>
+    <div class="overview-container">
+        <label for="columnSelect" class="selector-label">Select:</label>
+        <select id="columnSelect"></select>
+    </div>
+
+    <hr class="separator-line"> 
+    <div class="selector-container">
+        <div id="selector1"><label for="selector1" class="selector-label selector1">Member 1:</label></div>
+        <div id="selector2"><label for="selector1" class="selector-label selector2">Member 2:</label></div>
+        <div id="selector3"><label for="selector1" class="selector-label selector3">Member 3:</label></div>
+        <div id="selector4"><label for="selector1" class="selector-label selector4">Member 4:</label></div>
+    </div>
+    <div id="radarChart"></div>
+    <hr class="separator-line">
+    <p class="centered-text">KTH: DH2321 Information Visualization </p>
+
+
+
+    <script src="bar.js"></script>
+
+    <script src="radar2.js"></script>
+</body>
+</html>
